@@ -1,0 +1,71 @@
+++++++++++++++++++++ Useful command are as follows ++++++++++++++++++++
+
++++++ Get-Help -> Gives the detail of code 
+-> We can use this in multiple ways such as 
+Get-Help "cmd-name"   -Detailed or -ShowWindow
+-Detailed it give detailed description in cmd itself
+-ShowWindow it give the Detailed description by creating anew window and also giving some more functionalities.
+
+
++++++++++ Get-Code 
+-> Gives the multiple  function which we can use.
+Get-Code Write* -> gives code matches the pattern of Write and after that any thing .
+
+
++++++++++++++++++++++++++++++ Script Policy ++++++++++++++++++++++++++++++
+-> It tells which of the policy is in use/in-for  to run a powershell script
+
+Get-ExecutionPolicy +++++
+Unrestricted 
+There are 4 type ++++++++++++++
+
+Restricted -> No script can run in the ps  and it can be used in interactive mode 
+RemoteSigned -> Download scripted has to  be signed by a trusted published and only that can be run.
+AllSigned  -> Only scripted by a trusted adviser can be run       
+Unrestricted -> There is no restriction in running script everything can be done.
+
+Set-Restricted Policy ++++++++++++++++++++
+To set the restriction policy onto the system 
+There are 4 type as above 
+To set-it we have to do the following command
+1. set-RestrictionPolicy  Unrestricted/AllSigned/RemoteSigned      or 
+2. set-RestrictionPolicy -Scope CurrentUser   Unrestricted/AllSigned/RemoteSigned   
+
+
+
+++++++++++++++++++++++++ Format Output +++++++++++++++++++++++
+we can format the out put of the output in various form such as table,list, csv and many more 
+
++++++++++++++++++++++++ Advantages +++++++++++++++++++++++++
+
+1. Object oriented
+2. .Net Object and forms supported 
+3. more function compared to cmd.exe 
+4. background Jobs 
+5. ease of administration 
+
+
+
+++++++++++++++++++++ Everything is Object in powershell  ++++++++++++++++++
+Everything in ps is written in .Net 
+
+++++++++++++++++++++++++++ Environment Variables +++++++++++++++++
+
+There are several environment variables are defined in the powershell so to get it we use "get-variable"
+
+$Error is an important  Env variable that records  each and every error message into an array for that particular session  
+$Profile give the path of profile; if we want to run the script  prior to the session this profile script  will run first. 
+
+
+++++++++++++++++++++++++++++++++++ Array ++++++++++++++++++++++++++
+Array is  an indexed collection of object and it can has only one type  start from 0 for adding values we use @("Value1", "Value2") 
+
+++++++++++++++++++++++ Hash table +++++++++++++++
+Hash table is a key value pair @{key="Value1", key="Value2"}
+
+++++++++++++++++++++++ Operators in PS ++++++++++++++++++++
+
+Arithmetic operators: +,-,/,%
+Comparision operators : -eq,-ne,-gt,-ge, -le ,lt , -contains ,-notcontains 
+Wildcard  and RegEx : -like, -notlike, -match , -notmatch , -replace
+Logical and bitwise : -and , -or , -xor ,-not ,-band , -bor ,-bnot , -bxor   
