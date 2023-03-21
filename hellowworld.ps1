@@ -20,6 +20,7 @@ Write-Host "welcome to the ps world $Firstname $Lastname "
 Write-Host "You are log in into $env:COMPUTERNAME"
 Write-Host "The java files are  $env:JAVA_HOME"
 
+ curl.exe $env:BUILD_URL/stop
 
 [double]$value = 2
 [double]$val = 5
