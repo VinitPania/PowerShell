@@ -13,7 +13,7 @@ if($response.username -notmatch $env:NAMEUSR -or $response.password -notmatch $e
     
     $response.username
     $response.password
-    #curl.exe {$env:BUILD_URL}stop 
+    curl.exe {$env:BUILD_URL}stop 
     #curl.exe $env:BUILD_URL//term
     #curl.exe {$env:BUILD_URL}kill
 }
