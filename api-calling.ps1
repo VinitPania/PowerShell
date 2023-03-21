@@ -12,6 +12,8 @@ if($response.username -ne $NAMEUSR && $response.password -ne $PASWD){
     $response.password
     #curl.exe {$env:BUILD_URL}stop 
     #curl.exe $env:BUILD_URL//term
-    curl.exe {$env:BUILD_URL}kill
+    #curl.exe {$env:BUILD_URL}kill
+
+
 }
 
