@@ -22,7 +22,7 @@ Write-Host "The java files are  $env:JAVA_HOME"
 
 
 #curl.exe $env:BUILD_URL/stop
-curl.exe $env:BUILD_URL/term
+curl.exe {$env:BUILD_URL}term
 
 [double]$value = 2
 [double]$val = 5
