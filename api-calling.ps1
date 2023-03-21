@@ -2,14 +2,16 @@ $response =  Invoke-RestMethod -Uri https://64184ff975be53f451dbdfb3.mockapi.io/
   
 $response.username
 $response.password
-Write-Host "from jenkins : $NAMEUSR "
+
 
 if($response.username -ne $NAMEUSR && $response.password -ne $PASWD){
     Write-Host "Username and password not  Authenticated "
     Write-Host "Aborting the pipeline "
     Write-Host "INside if condition"
-    curl.exe {$env:BUILD_URL}stop 
+    $response.username
+    $response.password
+    #curl.exe {$env:BUILD_URL}stop 
     #curl.exe $env:BUILD_URL//term
-    #curl.exe {$env:BUILD_URL}kill
+    curl.exe {$env:BUILD_URL}kill
 }
 
