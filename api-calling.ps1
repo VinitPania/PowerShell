@@ -2,7 +2,7 @@ $response =  Invoke-RestMethod -Uri https://64184ff975be53f451dbdfb3.mockapi.io/
   
 $response.username
 $response.password
-Write-Host "from jenkins :${USERNAME}"
+Write-Host "from jenkins : $NAMEUSR "
 
 # if($response.username -ne $env:USERNAME && $response.password -ne $env:PASSWORD){
 #     Write-Host "Username and password not  Authenticated "
