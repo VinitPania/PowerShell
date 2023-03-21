@@ -1,1 +1,0 @@
- Write-Host "$env:BUILD_NUMBER"
