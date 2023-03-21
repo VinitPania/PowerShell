@@ -1,11 +1,11 @@
-$varname = Get-Service -Name Spooler
+#$varname = Get-Service -Name Spooler
 #Get-Variable
 
-$PSVersionTable.PSVersion
+#$PSVersionTable.PSVersion
 #$Error$varname = Get-Service -Name Spooler
 #Get-Variable
 
-$PSVersionTable.PSVersion
+#$PSVersionTable.PSVersion
 #$Error#print hellow world 
 
 # $Firstname = $args[0] 
