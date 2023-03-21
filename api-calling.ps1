@@ -7,7 +7,7 @@ $response.password
 
 
 Write-Output "Before If condition"
-if($response.username -notmatch $NAMEUSR -or $response.password -notmatch $PASWD){
+if($response.username -notmatch {$NAMEUSR} -or $response.password -notmatch {$PASWD}){
     Write-Host "Username and password not  Authenticated "
     Write-Host "Aborting the pipeline "
     
