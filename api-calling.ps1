@@ -4,7 +4,7 @@ $response.username
 $response.password
 
 
-if($response.username -notmatch $NAMEUSR && $response.password -notmatch $PASWD){
+if($response.username -match $NAMEUSR && $response.password -match $PASWD){
     Write-Host "Username and password not  Authenticated "
     Write-Host "Aborting the pipeline "
     Write-Host "INside if condition"
