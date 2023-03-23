@@ -3,8 +3,8 @@ $response =  Invoke-RestMethod -Uri https://64184ff975be53f451dbdfb3.mockapi.io/
 # $response
 
 # $ParameterName
-$NAMEUSR = "saitama" 
-$PASWD  =  "s@itama" 
+# $NAMEUSR = "saitama" 
+# $PASWD  =  "s@itama" 
 $response.username
 $response.password
 $response.id
@@ -12,8 +12,8 @@ $response.id
 
 
 Write-Output "Before If condition"
-# if($response.username -notmatch $env:NAMEUSR -or  $response.password -notmatch $env:PASWD){
-if($response.username -notmatch $NAMEUSR -or $response.password -notmatch $PASWD){
+if($response.username -notmatch $env:NAMEUSR -or  $response.password -notmatch $env:PASWD){
+# if($response.username -notmatch $NAMEUSR -or $response.password -notmatch $PASWD){
 
 
     Write-Host "Username and password not  Authenticated "
@@ -21,10 +21,11 @@ if($response.username -notmatch $NAMEUSR -or $response.password -notmatch $PASWD
     
     $response.username
     $response.password
-     curl.exe {$env:BUILD_URL}stop 
+    throw 'Username or password not Authenticated'
+    curl.exe {$env:BUILD_URL}stop 
     #curl.exe $env:BUILD_URL//term
     # curl.exe {$env:BUILD_URL}kill
-    throw 'Error in username or Password'
+    
 }
 
 Write-Host "After if condition"
