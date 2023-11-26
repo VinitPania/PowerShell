@@ -5,7 +5,7 @@ $body = "This is a test body ";
 $smptserver = "email.cloverinfotech.com"
 $port = "587"
 $username = "vinit.pania@cloveinfotech.com";
-$password = "Vinit@123" | ConvertTo-SecureString -AsPlainText -Force
+$password = "*&(^^&^&^*&^&^" | ConvertTo-SecureString -AsPlainText -Force
 
 $password
 
@@ -25,7 +25,7 @@ function  To-SendMail {
     )
     #getting user name and password 
     $Username = "vinit.pania@cloveinfotech.com";
-    $password = "Vinit@123" | ConvertTo-SecureString -AsPlainText -Force
+    $password = "$$$$#@##@#$" | ConvertTo-SecureString -AsPlainText -Force
 
     #Create a hash-table  for  the email
 
